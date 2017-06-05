@@ -1,0 +1,34 @@
+{
+
+  "manifest_version": 2,
+  "name": "DaviesExt",
+  "version": "1.0",
+
+  "description": "A simple plugin with future bigger dreams that changes the browser them color to the selected.",
+  "homepage_url": "https://github.com/Wabuluka/assignment4",
+
+  "icons": {
+    "48": "icon/icon_one.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icons/red_color.png",
+    "default_title": "Red Color",
+    "default_popup": "popup/red.html"
+  },
+
+  "web_accessible_resources": [
+    "beasts/frog.jpg",
+    "beasts/turtle.jpg",
+    "beasts/snake.jpg"
+  ]
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["content_scripts/davies.js"]
+    }
+  ]
+}
