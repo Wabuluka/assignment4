@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "webcolor",
+  "version": "0.1.0",
+  "description": "Demo extension",
+  "icons": {
+    "48": "icon_one.png"
+  },
+ 
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://blog.lateral.io/*"]
+  }]
+ 
+}
